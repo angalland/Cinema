@@ -8,4 +8,9 @@ spl_autoload_register(function ($class_name ) {
 
 $batman = new Film ("Batman begins", "15-06-2005", 140 );
 
-echo $batman->getDuree();
+echo $batman->getDuree()."</br>";
+echo $batman."</br>";
+
+$james_bond = new Role ("James bond");
+
+echo $james_bond."</br>";
