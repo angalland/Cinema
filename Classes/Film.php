@@ -9,16 +9,19 @@ class Film {
     private int $_duree;
     // private array $_castings;
     private Realisateur $_realisateur;
+    private Genre $_genre;
 
     // Constructeur
 
-    public function __construct(string $titre, string $dateSortie, int $duree, Realisateur $realisateur) {
+    public function __construct(string $titre, string $dateSortie, int $duree, Realisateur $realisateur, Genre $genre) {
         $this->_titre = $titre;
         $this->_dateSortie = new DateTime ($dateSortie);
         $this->_duree = $duree;
         // $this->_castings =[];
         $this->_realisateur = $realisateur;
         $this->_realisateur->addFilm($this);
+        $this->_genre = $genre;
+        $this->_genre->addFilm($this);
 
     }
 
@@ -62,6 +65,14 @@ class Film {
 
     public function setRealisateur($realisateur)  {
         return $this->_realisateur = $realisateur;
+    }
+
+    public function getGenre() {
+        return $this->_genre;
+    }
+
+    public function setGenre($genre)  {
+        return $this->_genre = $genre;
     }
 
     // toString 
