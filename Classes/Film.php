@@ -76,6 +76,17 @@ class Film {
         return $result;
     }
 
+    // afficher acteur
+
+    public function afficherActeur() {
+        $result = "<h2> Acteur de $this</h2>";
+        foreach ($this->_castings as $casting) {
+            $result .= $casting->getActeur()."</br>";
+        }
+
+        return $result;
+    }
+
 }
 
 

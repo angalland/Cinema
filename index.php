@@ -29,4 +29,12 @@ $casting5 = new Casting ($theDarkNight, $batman, $michaelKeaton, "15-04-2006", 4
 echo $batmanBegins->afficherRole();
 echo "</br>";
 echo $batman->afficherActeur();
+echo "</br>";
+echo $batmanBegins->afficherActeur();
+echo "</br>";
+echo $batman->afficherFilm();
+echo "</br>";
+echo $michaelCaine->afficherFilm();
+echo "</br>";
+echo $michaelCaine->afficherRole();
 

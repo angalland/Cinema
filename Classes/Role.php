@@ -46,7 +46,7 @@ class Role {
             $this->_castings[] = $castings;
     }
 
-    // afficher role
+    // afficher acteur
 
     public function afficherActeur() {
         $result = "<h2> Acteur de $this</h2>";
@@ -57,5 +57,15 @@ class Role {
         return $result;
     }
 
+    // afficher film
+
+    public function afficherFilm() {
+        $result = "<h2> Film ayant pour rôle $this</h2>";
+        foreach ($this->_castings as $casting) {
+            $result .= $casting->getFilm()."</br>";
+        }
+
+        return $result;
+    }
 
 }

@@ -37,6 +37,28 @@ class Acteur {
         $this->_castings[] = $castings;
     }
 
+    // afficher film
+
+    public function afficherFilm() {
+        $result = "<h2> Les films de $this</h2>";
+        foreach ($this->_castings as $casting) {
+            $result .= $casting->getFilm()."</br>";
+        }
+
+        return $result;
+    }
+
+    // afficher role
+
+    public function afficherRole() {
+        $result = "<h2> Les rôle de $this</h2>";
+        foreach ($this->_castings as $casting) {
+            $result .= $casting->getRole()."</br>";
+        }
+
+        return $result;
+    }
+
 
 
 }
