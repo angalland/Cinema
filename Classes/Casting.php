@@ -18,6 +18,9 @@ class Casting {
         $this->_acteur = $acteur;
         $this->_dateTournage = new DateTime($dateTournage);
         $this->_dureeTournage = $dureeTournage;
+        $this->_film->addCastings($this);
+        $this->_role->addCastings($this);
+        $this->_acteur->addCastings($this);
     }
 
     // Getter et Setter 
@@ -61,4 +64,6 @@ class Casting {
     public function setDureeTournage($dureeTournage) : int {
         return $this->_dureeTournage = $dureeTournage;
     }
+
+  
 }

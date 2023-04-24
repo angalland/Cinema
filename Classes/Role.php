@@ -5,6 +5,7 @@ class Role {
     // Argument
 
     private string $_role;
+    private array $castings;
 
 
     // Constructeur
@@ -12,6 +13,7 @@ class Role {
     public function __construct(string $role) {
 
         $this->_role = $role;
+        $this->_castings = [];
     }
 
     // Getter et Setter
@@ -24,13 +26,25 @@ class Role {
         return $this->_role = $role;
     }
 
+    public function getCastings() {
+        return $this->_castings;
+    }
+
+    public function setCastings($castings)  {
+        return $this->_castings = $castings;
+    }
+
     // toString
 
     public function __toString() : string {
         return $this->_role;
     }
 
+    // Ajouter Casting
 
+    public function addCasting(Casting $castings) {
+            $this->_castings[] = $castings;
+    }
 
 
 }
