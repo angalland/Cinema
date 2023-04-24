@@ -27,7 +27,7 @@ class Acteur extends Personne {
     // ToString
 
     public function __toString() {
-        return $this->_nom ." ".$this->_prenom;
+        return $this->_prenom ." ".$this->_nom;
     }
 
     // Ajouter Casting

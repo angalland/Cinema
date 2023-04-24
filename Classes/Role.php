@@ -64,8 +64,9 @@ class Role {
         foreach ($this->_castings as $casting) {
             $result .= $casting->getFilm()."</br>";
         }
-
         return $result;
     }
+            
+
 
 }

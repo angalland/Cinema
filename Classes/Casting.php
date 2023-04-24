@@ -22,7 +22,7 @@ class Casting {
 
     // Getter et Setter 
 
-    public function getFilm() : Film {
+    public function getFilm()  {
         return $this->_film;
     }
 
