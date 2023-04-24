@@ -8,6 +8,7 @@ class Film {
     private DateTime $_dateSortie;
     private int $_duree;
     private array $_castings;
+    private array $_realisateur;
 
     // Constructeur
 
@@ -16,6 +17,7 @@ class Film {
         $this->_dateSortie = new DateTime ($dateSortie);
         $this->_duree = $duree;
         $this->_castings =[];
+        $this->_realisateur = [];
 
     }
 
@@ -53,6 +55,14 @@ class Film {
         return $this->_castings = $castings;
     }
 
+    public function getRealisateur() {
+        return $this->_realisateur;
+    }
+
+    public function setRealisateur($realisateur)  {
+        return $this->_realisateur = $realisateur;
+    }
+
     // toString 
 
     public function __toString() : string {
@@ -63,6 +73,12 @@ class Film {
 
     public function addCasting(Casting $castings) {
         $this->_castings[] = $castings;
+    }
+
+    // Ajouter realisateur
+
+    public function addRealisateur(Casting $realisateur) {
+        $this->_realisateur[] = $realisateur;
     }
 
     // afficher role
