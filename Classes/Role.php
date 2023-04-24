@@ -46,13 +46,18 @@ class Role {
             $this->_castings[] = $castings;
     }
 
+
+
     // afficher acteur
 
     public function afficherActeur() {
         $result = "<h2> Acteur de $this</h2>";
+        $tmp = array();
         foreach ($this->_castings as $casting) {
+        if (!in_array("".$casting->getActeur(), $tmp)) {
             $result .= $casting->getActeur()."</br>";
-        }
+            array_push($tmp, "".$casting->getActeur());
+        }}
 
         return $result;
     }

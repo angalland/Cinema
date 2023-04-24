@@ -8,11 +8,11 @@ spl_autoload_register(function ($class_name ) {
 
     // Personne
 
-$personne1 = new Personne ("Dicaprio", "Leonardo", "Masculin", "11-11-1974");
+/*$personne1 = new Personne ("Dicaprio", "Leonardo", "Masculin", "11-11-1974");
 $personne2 = new Personne ("Scott", "Ridley", "Masculin", "30-11-1937" );
 $personne3 = new Personne ("Burton", "Tim", "Masculin", "25-08-1958");
 $personne4 = new Personne ("Schumacher", "Joel", "Masculin", "29-08-1939");
-$personne5 = new Personne ("Nolan", "Christopher", "Masculin", "30-07-1970");
+$personne5 = new Personne ("Nolan", "Christopher", "Masculin", "30-07-1970");*/
 
     // Realisateur
 
@@ -97,5 +97,5 @@ echo $role1->afficherFilm();
 echo $role1->afficherActeur();
 
 echo $role2->afficherActeur();
-echo 
+
 

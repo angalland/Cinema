@@ -7,6 +7,7 @@ class Casting {
     private Film $_film;
     private Role $_role;
     private Acteur $_acteur;
+    
 
 
     // Constructeur
@@ -18,6 +19,7 @@ class Casting {
         $this->_film->addCasting($this);
         $this->_role->addCasting($this);
         $this->_acteur->addCasting($this);
+       
     }
 
     // Getter et Setter 
@@ -38,13 +40,14 @@ class Casting {
         return $this->_role = $role;
     }
 
-    public function getActeur() : Acteur {
+    public function getActeur()  {
         return $this->_acteur;
     }
 
     public function setActeur($acteur) : Acteur {
         return $this->_acteur = $acteur;
     }
+
 
    
 
