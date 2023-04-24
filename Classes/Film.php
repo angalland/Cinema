@@ -8,17 +8,17 @@ class Film {
     private DateTime $_dateSortie;
     private int $_duree;
     private array $_castings;
-    private Personne $_realisateur;
+    private PersonneRea $_realisateur;
 
     // Constructeur
 
-    public function __construct(string $titre, string $dateSortie, int $duree, Personne $realisateur) {
+    public function __construct(string $titre, string $dateSortie, int $duree, PersonneRea $realisateur) {
         $this->_titre = $titre;
         $this->_dateSortie = new DateTime ($dateSortie);
         $this->_duree = $duree;
         $this->_castings =[];
         $this->_realisateur = $realisateur;
-        $this->_realisateur->addPersonne($this);
+        $this->_realisateur->addRealisateur($this);
 
     }
 
@@ -68,14 +68,7 @@ class Film {
 
     public function __toString() : string {
         return $this->_titre;
-    }
-
-    
-    // Ajouter realisateur
-
-    public function addPersonne(Personne $personne) {
-        $this->_personne[] = $personne;
-    }    
+    } 
 
     // Ajouter Casting
 
