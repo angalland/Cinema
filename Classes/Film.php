@@ -7,7 +7,7 @@ class Film {
     private string $_titre;
     private DateTime $_dateSortie;
     private int $_duree;
-    // private array $_castings;
+     private array $_castings;
     private Realisateur $_realisateur;
     private Genre $_genre;
 
@@ -17,7 +17,7 @@ class Film {
         $this->_titre = $titre;
         $this->_dateSortie = new DateTime ($dateSortie);
         $this->_duree = $duree;
-        // $this->_castings =[];
+         $this->_castings =[];
         $this->_realisateur = $realisateur;
         $this->_realisateur->addFilm($this);
         $this->_genre = $genre;
@@ -51,13 +51,13 @@ class Film {
         return $this->_duree = $duree;
     }
 
-    /*public function getCastings() {
+    public function getCastings() {
         return $this->_castings;
     }
 
     public function setCastings($castings)  {
         return $this->_castings = $castings;
-    }*/
+    }
 
     public function getRealisateur() {
         return $this->_realisateur;
@@ -81,7 +81,7 @@ class Film {
         return $this->_titre;
     } 
 
-    /*// Ajouter Casting
+    // Ajouter Casting
 
     public function addCasting(Casting $castings) {
         $this->_castings[] = $castings;
@@ -108,7 +108,7 @@ class Film {
         }
 
         return $result;
-    }*/
+    }
 
 }
 
