@@ -67,5 +67,18 @@ class Film {
         $this->_castings[] = $castings;
     }
 
+    // afficher role
+
+    public function afficherRole() {
+        $result = "<h2> Rôle de $this</h2>";
+        foreach ($this->_castings as $casting) {
+            $result .= $casting->getRole();
+        }
+
+        return $result;
+    }
 
 }
+
+
+

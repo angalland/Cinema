@@ -18,9 +18,9 @@ class Casting {
         $this->_acteur = $acteur;
         $this->_dateTournage = new DateTime($dateTournage);
         $this->_dureeTournage = $dureeTournage;
-        $this->_film->addCastings($this);
-        $this->_role->addCastings($this);
-        $this->_acteur->addCastings($this);
+        $this->_film->addCasting($this);
+        $this->_role->addCasting($this);
+        $this->_acteur->addCasting($this);
     }
 
     // Getter et Setter 
