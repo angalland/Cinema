@@ -1,18 +1,17 @@
 <?php
 
-class Acteur {
+class Acteur extends Personne {
 
     // Argument
         private array $_castings;
-        private string $_nom;
-        private string $_prenom;
+
 
     // Constructeur 
 
-    public function __construct(string $nom, string $prenom){
+    public function __construct($nom, $prenom, $genre, $dateNaissance){
+        parent::__construct($nom, $prenom, $genre, $dateNaissance);
         $this->_castings = [];
-        $this->_nom = $nom;
-        $this->_prenom = $prenom;
+
     }
 
     // Getter et Setter
