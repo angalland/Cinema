@@ -5,8 +5,6 @@ class Film {
     // Argument
 
     private string $_titre;
-    // private string $_synopis;
-    // private string $_genre;
     private DateTime $_dateSortie;
     private int $_duree;
     private array $_castings;
@@ -72,7 +70,7 @@ class Film {
     public function afficherRole() {
         $result = "<h2> Rôle de $this</h2>";
         foreach ($this->_castings as $casting) {
-            $result .= $casting->getRole();
+            $result .= $casting->getRole()."</br>";
         }
 
         return $result;
