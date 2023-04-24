@@ -56,6 +56,6 @@ class Personne {
     // toString
 
     public function __toString() {
-        return $this->_prenom." ".$this->_nom;
+        return $this->_prenom." ".$this->_nom."</br>";
     }
 }

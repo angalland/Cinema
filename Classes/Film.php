@@ -7,18 +7,18 @@ class Film {
     private string $_titre;
     private DateTime $_dateSortie;
     private int $_duree;
-    private array $_castings;
-    private PersonneRea $_realisateur;
+    // private array $_castings;
+    private Realisateur $_realisateur;
 
     // Constructeur
 
-    public function __construct(string $titre, string $dateSortie, int $duree, PersonneRea $realisateur) {
+    public function __construct(string $titre, string $dateSortie, int $duree, Realisateur $realisateur) {
         $this->_titre = $titre;
         $this->_dateSortie = new DateTime ($dateSortie);
         $this->_duree = $duree;
-        $this->_castings =[];
+        // $this->_castings =[];
         $this->_realisateur = $realisateur;
-        $this->_realisateur->addRealisateur($this);
+        $this->_realisateur->addFilm($this);
 
     }
 
@@ -48,20 +48,20 @@ class Film {
         return $this->_duree = $duree;
     }
 
-    public function getCastings() {
+    /*public function getCastings() {
         return $this->_castings;
     }
 
     public function setCastings($castings)  {
         return $this->_castings = $castings;
+    }*/
+
+    public function getRealisateur() {
+        return $this->_realisateur;
     }
 
-    public function getPersonne() {
-        return $this->_personne;
-    }
-
-    public function setPersonne($personne)  {
-        return $this->_personne = $personne;
+    public function setRealisateur($realisateur)  {
+        return $this->_realisateur = $realisateur;
     }
 
     // toString 
@@ -70,7 +70,7 @@ class Film {
         return $this->_titre;
     } 
 
-    // Ajouter Casting
+    /*// Ajouter Casting
 
     public function addCasting(Casting $castings) {
         $this->_castings[] = $castings;
@@ -97,7 +97,7 @@ class Film {
         }
 
         return $result;
-    }
+    }*/
 
 }
 

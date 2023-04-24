@@ -4,18 +4,35 @@ class Realisateur extends Personne {
 
     // argument
 
-     private array $_film;
+    private array $_films; 
 
     // constructeur
 
-    public function __construct(){
-        $this->_film = [];
-        parent::__construct($nom, $prenom, $duree, $dateNaissance);
+    public function __construct($nom, $prenom, $genre, $dateNaissance){
+    parent::__construct($nom, $prenom, $genre, $dateNaissance);
+    $this->_films = [];
     }
 
-    // ajouter film
-    public function addFilm(Film $film){
-        $this->_film[] = $film;
+    // getter et setter 
+
+    public function getFilms(){
+        return $this->_films;
+    }
+
+    public function setFilms($films){
+        return $this->_films = $films;
+    }
+
+    // toString 
+
+    public function __toString(){
+        return $this->_prenom." ".$this->_nom;
+    }
+
+    // ajouter Film
+
+    public function addFilm(Film $films){
+    $this->_films[] = $films."</br>";
     }
 }
 
