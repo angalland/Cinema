@@ -6,9 +6,9 @@ class Casting {
 
     // Argument
 
-    private Film $_film;
-    private Role $_role;
-    private Acteur $_acteur;
+    private Film $_film; // le casting concerne ce film
+    private Role $_role; // concerne un role
+    private Acteur $_acteur; // concerne un acteur
     
 
 
