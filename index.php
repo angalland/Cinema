@@ -16,6 +16,11 @@ echo "</br>";
 echo $filmStarWars1->afficherActeur();
 echo "</br>";
 echo $genre2->ListFilmGenre();
+echo "</br>";
+echo $acteur4->afficherFilmographie();
+echo "</br>";
+echo $real2->afficherFilmographie();
+
 
 
 

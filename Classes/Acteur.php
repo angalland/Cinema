@@ -60,7 +60,13 @@ class Acteur extends Personne {
 
     // afficher filmographie 
 
-    public
+    public function afficherFilmographie () {
+        $result = "<strong>$this</strong> a joué dans les films suivant :</br>";
+        foreach ($this->_castings as $casting){
+            $result .= $casting->getFilm()."</br>";
+        }
+        return $result;
+    }
 
 
 

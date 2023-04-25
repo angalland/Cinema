@@ -63,7 +63,7 @@ spl_autoload_register(function ($class_name ) {
     $acteur1 = new Acteur ("Keaton", "Michael", "Masculin", "05-09-1951");
     $acteur2 = new Acteur ("Kilmer", "Val", "Masculin", "31-12-1959");
     $acteur3 = new Acteur ("Clooney", "George", "Masculin", "06-05-1961" );
-    $acteur4 = new Acteur ("Bale", "christian", "Masculin", "30-01-1974");
+    $acteur4 = new Acteur ("Bale", "Christian", "Masculin", "30-01-1974");
 
     // Acteur Stars Wars
 
