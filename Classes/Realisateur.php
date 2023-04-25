@@ -40,9 +40,9 @@ class Realisateur extends Personne {
     // afficher filmographie
 
     public function afficherFilmographie () {
-        $result = "$this a tourné les films suivant :</br>";
+        $result = "<strong>$this</strong> a tourné les films suivant :</br>";
         foreach ($this->_films as $film){
-            $result .= $film->getTitre()."</br>";
+            $result .= $film;
         }
         return $result;
     }
