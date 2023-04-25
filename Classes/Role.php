@@ -5,7 +5,7 @@ class Role {
     // Argument
 
     private string $_role;
-    private array $castings;
+    private array $_castings;
 
 
     // Constructeur
@@ -51,8 +51,8 @@ class Role {
     // afficher acteur
 
     public function afficherActeur() {
-        $result = "<h2> Acteur de $this</h2>";
-        $tmp = array();
+        $result = "Voici les acteurs qui ont joué le role de <strong>$this</strong> :</br>";
+        $tmp = array(); // permet de supprimer les doublons
         foreach ($this->_castings as $casting) {
         if (!in_array("".$casting->getActeur(), $tmp)) {
             $result .= $casting->getActeur()."</br>";
@@ -61,7 +61,7 @@ class Role {
 
         return $result;
     }
-
+    
     // afficher film
 
     public function afficherFilm() {

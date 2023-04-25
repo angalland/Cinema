@@ -58,6 +58,10 @@ class Acteur extends Personne {
         return $result;
     }
 
+    // afficher filmographie 
+
+    public
+
 
 
 }

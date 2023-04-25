@@ -102,7 +102,7 @@ class Film {
     // afficher acteur
 
     public function afficherActeur() {
-        $result = "<h2> Acteur de $this</h2>";
+        $result = "Acteur de <strong>$this</strong> :</br>";
         foreach ($this->_castings as $casting) {
             $result .= $casting->getActeur()."</br>";
         }

@@ -37,10 +37,10 @@ class Genre {
     // liste des films par genre 
 
     public function ListFilmGenre() {
+        $result = "Les films ayant pour genre <strong>$this</strong> sont :</br>";
         foreach ($this->_films as $film){
-            $result = $film." ";
+            $result .= $film." ";
         }
-        $result .= " ".$this;
         return $result;
     }
 }
