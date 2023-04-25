@@ -49,7 +49,7 @@ class Personne {
         return $this->_dateNaissance;
     }
 
-    public function setDateNaissance($dateNaissance) {
+    public function setDateNaissance($dateNaissance) : DateTime {
         return $this->_dateNaissance = $dateNaissance;
     }
 

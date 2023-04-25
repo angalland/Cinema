@@ -7,9 +7,9 @@ class Film {
     private string $_titre;
     private DateTime $_dateSortie;
     private int $_duree;
-    private array $_castings;
     private Realisateur $_realisateur;
     private Genre $_genre;
+    private array $_castings;
 
     // Constructeur
 
@@ -17,11 +17,11 @@ class Film {
         $this->_titre = $titre;
         $this->_dateSortie = new DateTime ($dateSortie);
         $this->_duree = $duree;
-        $this->_castings =[];
         $this->_realisateur = $realisateur;
         $this->_realisateur->addFilm($this);
         $this->_genre = $genre;
         $this->_genre->addFilm($this);
+        $this->_castings =[];
 
     }
 
@@ -91,7 +91,7 @@ class Film {
     // afficher role
 
     public function afficherRole() {
-        $result = "<h2> Rôle de $this</h2>";
+        $result = "Rôle de <strong>$this</strong></br>";
         foreach ($this->_castings as $casting) {
             $result .= $casting->getRole()."</br>";
         }

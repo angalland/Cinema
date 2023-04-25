@@ -54,7 +54,7 @@ class Role {
         $result = "Voici les acteurs qui ont joué le role de <strong>$this</strong> :</br>";
         $tmp = array(); // permet de supprimer les doublons
         foreach ($this->_castings as $casting) {
-        if (!in_array("".$casting->getActeur(), $tmp)) {
+        if (!in_array("".$casting->getActeur(), $tmp)) { // permet de supprimer les doublons
             $result .= $casting->getActeur()."</br>";
             array_push($tmp, "".$casting->getActeur());
         }}
@@ -65,7 +65,7 @@ class Role {
     // afficher film
 
     public function afficherFilm() {
-        $result = "<h2> Film ayant pour rôle $this</h2>";
+        $result = "Film ayant pour rôle <strong>$this</strong> : </br>";
         foreach ($this->_castings as $casting) {
             $result .= $casting->getFilm()."</br>";
         }

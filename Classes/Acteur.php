@@ -3,8 +3,8 @@
 class Acteur extends Personne {
 
     // Argument
-        private array $_castings;
 
+        private array $_castings;
 
     // Constructeur 
 
@@ -17,7 +17,7 @@ class Acteur extends Personne {
     // Getter et Setter
 
     public function getCastings() {
-        return $this->_contrats;
+        return $this->_castings;
     }
 
     public function setCastings($castings)  {
@@ -26,7 +26,7 @@ class Acteur extends Personne {
 
     // ToString
 
-    public function __toString() {
+    public function __toString() : string {
         return $this->_prenom ." ".$this->_nom;
     }
 
@@ -43,8 +43,7 @@ class Acteur extends Personne {
         foreach ($this->_castings as $casting) {
             $result .= $casting->getFilm()."</br>";
         }
-
-        return $result;
+           return $result;
     }
 
     // afficher role
@@ -54,8 +53,7 @@ class Acteur extends Personne {
         foreach ($this->_castings as $casting) {
             $result .= $casting->getRole()."</br>";
         }
-
-        return $result;
+            return $result;
     }
 
     // afficher filmographie 
@@ -67,7 +65,4 @@ class Acteur extends Personne {
         }
         return $result;
     }
-
-
-
 }

@@ -3,10 +3,12 @@
 class Genre {
 
     // argument
+
     private string $_genre;
     private array $_films;
 
     // constructeur 
+
     public function __construct(string $genre){
         $this->_genre = $genre;
         $this->_films = [];
@@ -14,17 +16,17 @@ class Genre {
 
     // getter et setter 
 
-    public function getFilms(){
+    public function getFilms() : string {
         return $this->_films;
     }
 
-    public function setFilms($films){
+    public function setFilms($films) : string {
         return $this->_films = $films;
     }
 
     // toString 
 
-    public function __toString(){
+    public function __toString() : string {
         return $this->_genre;
     }
 
