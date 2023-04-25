@@ -106,7 +106,7 @@ class Film {
             $result .= $casting->getRole()."</br>";
         }
 
-        return $result;
+        return $result."</br>";
     }
 
     // afficher acteur
@@ -117,7 +117,7 @@ class Film {
             $result .= $casting->getActeur()."</br>";
         }
 
-        return $result;
+        return $result."</br>";
     }
 
 }

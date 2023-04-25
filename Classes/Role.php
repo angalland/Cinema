@@ -59,7 +59,7 @@ class Role {
             array_push($tmp, "".$casting->getActeur());
         }}
 
-        return $result;
+        return $result."</br>";
     }
     
     // afficher film
@@ -69,7 +69,7 @@ class Role {
         foreach ($this->_castings as $casting) {
             $result .= $casting->getFilm()."</br>";
         }
-        return $result;
+        return $result."</br>";
     }
             
 

@@ -63,6 +63,6 @@ class Acteur extends Personne {
         foreach ($this->_castings as $casting){
             $result .= $casting->getFilm()."</br>";
         }
-        return $result;
+        return $result."</br>";
     }
 }
