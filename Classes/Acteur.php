@@ -9,8 +9,8 @@ class Acteur extends Personne {
     // Constructeur 
 
     public function __construct($nom, $prenom, $genre, $dateNaissance){
-        parent::__construct($nom, $prenom, $genre, $dateNaissance);
-        $this->_castings = [];
+        parent::__construct($nom, $prenom, $genre, $dateNaissance); // fait appelle au constructeur hérité de Personne
+        $this->_castings = []; // transforme la class Casting en tableau
 
     }
 
@@ -33,22 +33,12 @@ class Acteur extends Personne {
     // Ajouter Casting
 
     public function addCasting(Casting $castings) {
-        $this->_castings[] = $castings;
-    }
-
-    // afficher film
-
-    public function afficherFilm() {
-        $result = "<h2> Les films de $this</h2>";
-        foreach ($this->_castings as $casting) {
-            $result .= $casting->getFilm()."</br>";
-        }
-           return $result;
+        $this->_castings[] = $castings; // permet de d'ajouter les castings instancié dans un tableau
     }
 
     // afficher role
 
-    public function afficherRole() {
+    public function afficherRole() { // affiche les différents rôles joué par l'acteur
         $result = "<h2> Les rôle de $this</h2>";
         foreach ($this->_castings as $casting) {
             $result .= $casting->getRole()."</br>";
@@ -58,7 +48,7 @@ class Acteur extends Personne {
 
     // afficher filmographie 
 
-    public function afficherFilmographie () {
+    public function afficherFilmographie () { // affiche les différent films joué par l'acteur
         $result = "<strong>$this</strong> a joué dans les films suivant :</br>";
         foreach ($this->_castings as $casting){
             $result .= $casting->getFilm()."</br>";

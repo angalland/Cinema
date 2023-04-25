@@ -11,7 +11,7 @@ class Genre {
 
     public function __construct(string $genre){
         $this->_genre = $genre;
-        $this->_films = [];
+        $this->_films = []; // fait appelle a la classe film et la transforme en tableau
     }
 
     // getter et setter 
@@ -33,12 +33,12 @@ class Genre {
     // ajouter Film
 
     public function addFilm(Film $films){
-        $this->_films[] = $films."</br>";
+        $this->_films[] = $films."</br>"; // permet d'ajouter les films de genre dans un tableau
     }
 
     // liste des films par genre 
 
-    public function ListFilmGenre() {
+    public function ListFilmGenre() { // affiche tous les films d'un genre choisi
         $result = "Les films ayant pour genre <strong>$this</strong> sont :</br>";
         foreach ($this->_films as $film){
             $result .= $film." ";

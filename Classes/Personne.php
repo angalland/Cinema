@@ -55,7 +55,7 @@ class Personne {
 
     // toString
 
-    public function __toString() {
+    public function __toString() { // affiche ce que l'objet renvoie lorsqu'on le traite comme une chaine de caractère. ex echo $obj
         return $this->_prenom." ".$this->_nom."</br>";
     }
 }

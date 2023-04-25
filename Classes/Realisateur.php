@@ -9,8 +9,8 @@ class Realisateur extends Personne {
     // constructeur
 
     public function __construct($nom, $prenom, $genre, $dateNaissance){
-    parent::__construct($nom, $prenom, $genre, $dateNaissance);
-    $this->_films = [];
+    parent::__construct($nom, $prenom, $genre, $dateNaissance); // fait appele au constructeur de la classe hérité
+    $this->_films = []; // fait appelle a la classe film et la transforme en tableau
     }
 
     // getter et setter 
@@ -32,12 +32,12 @@ class Realisateur extends Personne {
     // ajouter Film
 
     public function addFilm(Film $films) {
-    $this->_films[] = $films."</br>";
+    $this->_films[] = $films."</br>"; // permet d'ajouter les films réalisé dans un tableau
     }
 
     // afficher filmographie
 
-    public function afficherFilmographie () {
+    public function afficherFilmographie () { // affiche la filmographie du réalisateur
         $result = "<strong>$this</strong> a tourné les films suivant :</br>";
         foreach ($this->_films as $film){
             $result .= $film;

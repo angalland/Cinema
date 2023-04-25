@@ -19,11 +19,11 @@ class Film {
         $this->_dateSortie = new DateTime ($dateSortie);
         $this->_duree = $duree;
         $this->_realisateur = $realisateur;
-        $this->_realisateur->addFilm($this);
+        $this->_realisateur->addFilm($this); // ajoute dans la class realisateur le film instancié
         $this->_genre = $genre;
-        $this->_genre->addFilm($this);
+        $this->_genre->addFilm($this); // ajoute dans la class genre le film instancié
         $this->_synopsis = $synopsis;
-        $this->_castings =[];
+        $this->_castings =[]; // fait appelle a la classe Casting et la transforme en array
 
     }
 
@@ -94,13 +94,13 @@ class Film {
     // Ajouter Casting
 
     public function addCasting(Casting $castings) {
-        $this->_castings[] = $castings;
+        $this->_castings[] = $castings; // permet d'importer la classe casting en la transformant en array
     }
 
 
     // afficher role
 
-    public function afficherRole() {
+    public function afficherRole() { // affiche les rôle du films selectionné
         $result = "Rôle de <strong>$this</strong></br>";
         foreach ($this->_castings as $casting) {
             $result .= $casting->getRole()."</br>";
@@ -111,7 +111,7 @@ class Film {
 
     // afficher acteur
 
-    public function afficherActeur() {
+    public function afficherActeur() { // affiche les acteurs du films selectionné
         $result = "Acteur de <strong>$this</strong> :</br>";
         foreach ($this->_castings as $casting) {
             $result .= $casting->getActeur()."</br>";

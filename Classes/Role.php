@@ -13,7 +13,7 @@ class Role {
     public function __construct(string $role) {
 
         $this->_role = $role;
-        $this->_castings = [];
+        $this->_castings = []; // transforme la class Casting en tableau
     }
 
     // Getter et Setter
@@ -43,14 +43,14 @@ class Role {
     // Ajouter Casting
 
     public function addCasting(Casting $castings) {
-            $this->_castings[] = $castings;
+            $this->_castings[] = $castings; // permet d'ajouter les castings réalisé dans un tableau
     }
 
 
 
     // afficher acteur
 
-    public function afficherActeur() {
+    public function afficherActeur() { // affiche les différents roles joué par l'acteur
         $result = "Voici les acteurs qui ont joué le role de <strong>$this</strong> :</br>";
         $tmp = array(); // permet de supprimer les doublons
         foreach ($this->_castings as $casting) {
@@ -64,7 +64,7 @@ class Role {
     
     // afficher film
 
-    public function afficherFilm() {
+    public function afficherFilm() { //affiche les différents films joué par l'acteur
         $result = "Film ayant pour rôle <strong>$this</strong> : </br>";
         foreach ($this->_castings as $casting) {
             $result .= $casting->getFilm()."</br>";

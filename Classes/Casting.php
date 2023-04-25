@@ -16,9 +16,9 @@ class Casting {
         $this->_film = $film;
         $this->_role = $role;
         $this->_acteur = $acteur;
-        $this->_film->addCasting($this);
-        $this->_role->addCasting($this);
-        $this->_acteur->addCasting($this);
+        $this->_film->addCasting($this);// ajoute le casting instancié dans la classe Film
+        $this->_role->addCasting($this);// ajoute le casting instancié dans la classe Role
+        $this->_acteur->addCasting($this);// ajoute le casting instancié dans la classe Acteur
        
     }
 
