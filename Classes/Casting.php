@@ -1,5 +1,7 @@
 <?php
 
+// La classe Casting est une entité associative 
+
 class Casting {
 
     // Argument
