@@ -22,24 +22,24 @@ spl_autoload_register(function ($class_name ) {
     
     // Film
     
-    $film1 = new Film ("Avant le déluge","21-10-2016", 96, $real1, $genre1);
-    $film2 = new Film ("Blade runner", "15-06-1982", 117, $real2, $genre2 );
-    $film3 = new Film ("Prométhéus", "11-04-2012", 124, $real2, $genre2);
-    $film4 = new Film ("Alien", "12-09-1979", 127, $real2, $genre2);
+    $film1 = new Film ("Avant le déluge","21-10-2016", 96, $real1, $genre1, "Montre comment les changements climatiques impactent la planète");
+    $film2 = new Film ("Blade runner", "15-06-1982", 117, $real2, $genre2, "Un detective traque des robots dénommé 'replicant'" );
+    $film3 = new Film ("Prométhéus", "11-04-2012", 124, $real2, $genre2, "Des scientifiques recherchent l'origine de l'humanité");
+    $film4 = new Film ("Alien", "12-09-1979", 127, $real2, $genre2, "Des voyageurs de l'espace perçoivent un signal de détresse et décide d'intervenir");
     
     // Film Batman
     
-    $filmBatman1 = new Film ("Batman", "13-09-1989", 126, $real3, $genre5 );
-    $filmBatman2 = new Film ("Batman : Le Defi", "15-07-1992", 126, $real3, $genre5 );
-    $filmBatman3 = new Film ("Batman Forever", "19-07-1995", 121, $real4, $genre5 );
-    $filmBatman5 = new Film ("Batman et Robin", "20-06-1997", 125, $real4, $genre5);
-    $filmBatman6 = new Film ("Batman Begins", "15-06-2005", 140, $real5, $genre5 );
-    $filmBatman7 = new Film("The Dark Knight : Le chevalier noir", "13-08-2008", 152, $real5, $genre5 );
-    $filmBatman8 = new Film ("The Dark Knight rises", "25-02-2012", 164, $real5, $genre5 );
+    $filmBatman1 = new Film ("Batman", "13-09-1989", 126, $real3, $genre5, "batman affronte le joker");
+    $filmBatman2 = new Film ("Batman : Le Defi", "15-07-1992", 126, $real3, $genre5, "batman affronte le pinguoin et catwoman" );
+    $filmBatman3 = new Film ("Batman Forever", "19-07-1995", 121, $real4, $genre5, "Batman affronte double-face et l'homme mystere avec l'aide de robin" );
+    $filmBatman5 = new Film ("Batman et Robin", "20-06-1997", 125, $real4, $genre5, "batman affronte Misterfreeze avec robin et batgirl");
+    $filmBatman6 = new Film ("Batman Begins", "15-06-2005", 140, $real5, $genre5, "A la suite de la mort de ses parents, Bruce wayne entrepend un voyage qui le conduira a devenir batman" );
+    $filmBatman7 = new Film("The Dark Knight : Le chevalier noir", "13-08-2008", 152, $real5, $genre5, "Batman affronte le joker avec le nouveau procureur harvey dent");
+    $filmBatman8 = new Film ("The Dark Knight rises", "25-02-2012", 164, $real5, $genre5, "Batman a disparu et le chaos s'empare de gottam à l'arrivé de bane" );
 
     // Film Stars Wars
 
-    $filmStarWars1 = new FIlm ("Stars Wars episode IV : Un nouvel espoir", "19-10-1977", 121, $real6, $genre2);
+    $filmStarWars1 = new FIlm ("Stars Wars episode IV : Un nouvel espoir", "19-10-1977", 121, $real6, $genre2, "La guerre civile fait rage entre l'empire galactique et l'alliance rebelle. La princesse leia dissilmule les plans de l'étoiles Noire");
     
     // Role
     
